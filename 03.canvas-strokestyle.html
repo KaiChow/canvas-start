@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+    <canvas id="myCanvas1" width="200" height="200"></canvas>
+    <script>
+
+
+        /*----------  定义和用法
+         strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式。
+        color	指示绘图笔触颜色的 CSS 颜色值。默认值是 #000000。
+        gradient	用于填充绘图的渐变对象（线性或放射性）
+        pattern	用于创建 pattern 笔触的 pattern 对象
+ 
+         ----------*/
+
+
+
+
+        var canvas = document.getElementById("canvas"),
+            ctx = canvas.getContext('2d');
+        ctx.storkeStyle = "red";
+        ctx.strokeRect(20, 20, 150, 150);
+
+        /* 用渐变来处理 */
+
+        var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+
+            var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+            gradient.addColorStop("0", "magenta");
+            gradient.addColorStop("0.5", "blue");
+            gradient.addColorStop("1.0", "red");
+
+            // 用渐变进行填充
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = 5;
+            ctx.strokeRect(20, 20, 150, 100);
+
+            /* 用渐变笔来处理 */
+
+            var c = document.getElementById("myCanvas1");
+                var ctx = c.getContext("2d");
+
+                ctx.font = "30px Verdana";
+                // 创建渐变
+                var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+                gradient.addColorStop("0", "magenta");
+                gradient.addColorStop("0.5", "blue");
+                gradient.addColorStop("1.0", "red");
+                // 用渐变进行填充
+                ctx.strokeStyle = gradient;
+                ctx.strokeText("Hello World!", 10, 50);
+    </script>
+</body>
+
+</html>

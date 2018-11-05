@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+       *{
+           padding: 0;
+           margin: 0;
+       }
+   
+   </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        
+        /*----------  定义和用法
+        rotate() 方法旋转当前的绘图。
+        JavaScript 语法：
+        context.rotate(angle);
+        参数值
+        参数	描述
+        angle
+        旋转角度，以弧度计。
+        如需将角度转换为弧度，请使用 degrees*Math.PI/180 公式进行计算。
+        举例：如需旋转 5 度，可规定下面的公式：5*Math.PI/180。  
+        ----------*/
+          
+    var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.translate(150, 150);
+        
+        ctx.rotate(45 * Math.PI / 180);
+        /*  旋转只是针对 （0,0）*/
+        ctx.fillRect(100, 100, 50, 50);
+    
+    </script>
+</body>
+</html>

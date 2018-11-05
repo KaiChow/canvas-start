@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+
+
+
+
+        /*=============================================
+        =                 fillStyle                   =
+        context.fillStyle=color|gradient|pattern;
+        color	指示绘图填充色的 CSS 颜色值。默认值是 #000000。
+        gradient	用于填充绘图的渐变对象（线性或放射性）
+        pattern	用于填充绘图的 pattern 对象
+        
+        =============================================*/
+
+        let canvas = document.getElementById("canvas"),
+            ctx = canvas.getContext('2d'),
+            my_gradient = ctx.createLinearGradient(0, 0, 0, 170);
+        my_gradient.addColorStop(0, "black");
+        my_gradient.addColorStop(1, "white");
+        ctx.fillStyle = my_gradient;
+        ctx.fillRect(20, 20, 150, 100);
+
+
+        /*=====  End of Section comment block  ======*/
+
+
+
+
+    </script>
+</body>
+
+</html>

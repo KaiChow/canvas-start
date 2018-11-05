@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    <script>
+
+        /* 转换
+        方法	描述
+        scale()	缩放当前绘图至更大或更小
+        rotate()	旋转当前绘图
+        translate()	重新映射画布上的 (0,0) 位置
+        transform()	替换绘图的当前转换矩阵
+        setTransform()	将当前转换重置为单位矩阵。然后运行 transform() */
+
+        
+        /*---------
+        context.scale(scalewidth,scaleheight);
+        参数值
+        参数	描述
+        scalewidth	缩放当前绘图的宽度 (1=100%, 0.5=50%, 2=200%, 依次类推)
+        scaleheight	缩放当前绘图的高度 (1=100%, 0.5=50%, 2=200%, etc.)
+        ----------*/
+        
+        
+
+       var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.strokeRect(5, 5, 25, 15);
+        ctx.scale(2, 2);
+        ctx.strokeRect(5, 5, 25, 15);
+        ctx.scale(2, 2);
+        ctx.strokeRect(5, 5, 25, 15);
+        ctx.scale(2, 2);
+        ctx.strokeRect(5, 5, 25, 15);
+    
+    </script>
+</body>
+</html>

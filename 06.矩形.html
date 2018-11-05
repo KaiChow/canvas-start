@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="200"></canvas>
+    <script>
+        
+        /*----------  矩形
+        方法	描述
+        rect()	创建矩形
+        fillRect()	绘制“被填充”的矩形
+        strokeRect()	绘制矩形（无填充）
+        clearRect()	在给定的矩形内清除指定的像素  
+        ----------*/
+        
+        
+
+        /* 创建矩形 
+        context.rect(x,y,width,height);
+        */
+       var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        // 红色矩形
+        ctx.beginPath();
+        ctx.lineWidth = "6";
+        ctx.strokeStyle = "red";
+        ctx.rect(5, 5, 290, 140);
+        ctx.stroke();
+
+        // 绿色矩形
+        ctx.beginPath();
+        ctx.lineWidth = "4";
+        ctx.strokeStyle = "green";
+        ctx.rect(30, 30, 50, 50);
+        ctx.stroke();
+
+        // 蓝色矩形
+        ctx.beginPath();
+        ctx.lineWidth = "10";
+        ctx.strokeStyle = "blue";
+        ctx.rect(50, 50, 150, 80);
+        ctx.stroke();
+
+    </script>
+</body>
+
+</html>

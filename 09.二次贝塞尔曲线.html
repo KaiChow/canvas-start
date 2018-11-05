@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="300" width="300"></canvas>
+
+</body>
+<script>
+
+    /*----------  
+        例如---  ctx.quadraticCurveTo(20, 100, 200, 20);
+        开始点：moveTo(20,20)
+        控制点：20,100
+        结束点：200,20
+  ----------*/
+
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(20, 20);
+    ctx.quadraticCurveTo(20, 100, 200, 20);
+    ctx.stroke();
+</script>
+
+</html>

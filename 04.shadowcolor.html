@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+    <script>
+        
+        /*----------  定义和用法
+            shadowColor 属性设置或返回用于阴影的颜色。
+            注释：请将 shadowColor 属性与 shadowBlur 属性一起使用，来创建阴影。
+            提示：请通过使用 shadowOffsetX 和 shadowOffsetY 属性来调节阴影效果。 
+
+            shadowColor	设置或返回用于阴影的颜色
+            shadowBlur	设置或返回用于阴影的模糊级别  number 1,2...
+            shadowOffsetX	设置或返回阴影距形状的水平距离
+            shadowOffsetY	设置或返回阴影距形状的垂直距离
+ ----------*/
+        
+        
+    var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.shadowBlur = 20;
+        ctx.shadowOffsetX = 20;//带有向右偏移20像素的阴影
+        ctx.shadowColor = "black";
+        ctx.fillStyle = "blue";
+        ctx.fillRect(20, 20, 100, 80);
+    </script>
+</body>
+</html>
